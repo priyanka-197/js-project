@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project1</title>
+</head>
+<body>
+    
+    <div>
+        <h1>type only a number</h1>
+        <input id="input" class='a' type="number"><br><br>
+        <button class="btn1" onclick="run1(event)">decrement</button>
+        <button class="btn2"onclick="run2(event)">reset</button>
+        <button class="btn3"onclick="run3(event)">increment</button>
+        <div class="container"></div>
+    </div>
+    <script>
+      
+    
+      const run1=(e)=>{
+      // value=  Number(input.value)
+      
+    cvalue=Number(input.value);
+     newValue=cvalue - 1;
+     document.querySelector('.a').value=newValue;
+    //  console.log(newValue);
+    changeHandler(e);
+    }
+
+     const run3=(e)=>{
+      // value=  Number(input.value)
+     cvalue=Number(document.querySelector('#input').value);
+     newValue=cvalue + 1;
+     document.querySelector('#input').value=newValue;
+    changeHandler(e);}
+
+     const run2=(e)=>{
+      // value=  Number(input.value)
+     cvalue=Number(document.querySelector('#input').value);
+     newValue=0;
+     document.querySelector('#input').value=newValue;
+     console.log(newValue)
+    }
+
+      const changeHandler=(e)=>{
+        value=Number(input.value);
+        
+        if(value<0)
+         { document.querySelector('.container').innerHTML="please enter a positive value"}
+          
+            else{
+              document.querySelector('.container').innerHTML= `${value + 2} ,${value+ 4} , ${value+6} `
+            }}
+          
+      
+        
+            
+    
+        
+    </script>
+</body>
+</html>
