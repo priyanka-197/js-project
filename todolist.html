@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>grocery list</h1> 
+   <form>
+   <input id="input"type='text'>
+   <button type="submit"id='btn'onclick="onSubmit()">submit</button>
+   <ol id="list">
+    <!-- <li class="item"></li> -->
+    <!-- <li class="item"></li>
+    <li class="item"></li>
+    <li class="item"></li>
+    <li class="item"></li> -->
+
+    
+   </ol>
+</form>
+<script>
+    const onSubmit=()=>{
+        event.preventDefault();
+       list= document.querySelector('#list');
+   li=document.createElement('li');
+   li.setAttribute('class','item');
+   li.innerHTML=input.value;
+   list.appendChild(li);
+   input.value='';
+   console.log(input.value);
+
+    }
+</script>
+</body>
+</html>
