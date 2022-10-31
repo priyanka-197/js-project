@@ -26,7 +26,7 @@
         event.preventDefault();
        list= document.querySelector('#list');
    li=document.createElement('li');
-   li.setAttribute('class','item');
+   li.classList.add('item')
    li.innerHTML=input.value;
    list.appendChild(li);
    input.value='';
